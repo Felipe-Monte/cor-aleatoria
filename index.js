@@ -9,14 +9,14 @@ function randomBoxColor() {
     box.style.backgroundColor = '';
   });
 
-  let randomIndex;
+  let randomIndex = Math.floor(Math.random() * allBoxes.length);
 
   // Gera um novo índice enquanto for igual ao último
-  do {
+  while (randomIndex === lastIndex) {
     randomIndex = Math.floor(Math.random() * allBoxes.length);
-  } while (randomIndex === lastIndex);
+  }
 
-  // Atualiza o índice da última caixa selecionada
+  // Atualiza o índice da última caixa selecionada  
   lastIndex = randomIndex;
 
   // Define a cor da caixa selecionada
