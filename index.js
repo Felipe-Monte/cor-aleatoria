@@ -1,7 +1,6 @@
 const allBoxes = document.querySelectorAll('.item');
-let errors = 0;
-let successes  = 0;
-
+let userErrors = 0;
+let userSuccess = 0;
 let lastIndex = -1; // Armazena o índice da última caixa selecionada
 
 function randomBoxColor() {
@@ -31,12 +30,11 @@ allBoxes.forEach((box) => {
   box.addEventListener('click', function () {
     if (box.style.backgroundColor === 'red') {
       randomBoxColor();
-      successes ++;
+      userSuccess++;
     } else {
-      errors++;
+      userErrors++;
     }
 
-    console.log(`Erros: ${errors} Acertos: ${successes }`);
+    console.log(`Erros: ${userErrors} Acertos: ${userSuccess}`);
   });
 });
-

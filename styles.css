@@ -17,3 +17,10 @@
   background-color: white; /* Cor inicial */
   transition: background-color 0.2s ease; /* Suaviza a mudança de cor */
 }
+
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px;
+  width: 300px;
+}
